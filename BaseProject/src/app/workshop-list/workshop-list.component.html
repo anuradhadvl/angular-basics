@@ -1,17 +1,7 @@
 <div>
-  <h1>Upcoming Angular 5 Workshops</h1>
+  <h1 style="color: white">Upcoming Angular 5 Workshops</h1>
   <hr>
-  <div class="card hover card-body bg-light" 
-    style="background-color: #333; border-color: #333; font-size: 150%; cursor: pointer;">
-    <h2>{{workshop.name}}</h2>
-    <div>Date: {{workshop.date}}</div>
-    <div>Time: {{workshop.time}}</div>
-    <div>Price: ${{workshop.price}}</div>
-    <div>
-      <span>Location: {{workshop.location.address}}</span>
-      <span>&nbsp;</span>
-      <span>{{workshop.location.city}}, {{workshop.location.country}}</span>
-    </div>
+  <div>
+    <workshop-thumbnail [workshop]="workshop"></workshop-thumbnail>
   </div>
-
 </div>

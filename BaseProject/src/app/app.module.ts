@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { WorkshopListComponent } from './workshop-list/workshop-list.component';
+import { WorkshopThumbnailComponent } from './workshop-thumbnail/workshop-thumbnail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorkshopListComponent
+    WorkshopListComponent,
+    WorkshopThumbnailComponent
   ],
   imports: [
     BrowserModule
