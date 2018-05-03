@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-//this is from VS Code
+//First Component
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
