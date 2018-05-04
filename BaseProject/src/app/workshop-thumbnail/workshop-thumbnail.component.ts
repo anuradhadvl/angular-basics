@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'workshop-thumbnail',
@@ -8,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WorkshopThumbnailComponent implements OnInit {
 
   @Input() workshop: any;
+  @Output() eventClick = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleClickMe(){
+    this.eventClick.emit(this.workshop.name);
   }
 
 }
