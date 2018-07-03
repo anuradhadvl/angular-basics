@@ -1,1 +1,15 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+body,html{
+    height: 100%;
+}
+
+.bg {
+    
+    /* Half height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+    background-position: unset;
+    background-repeat: unset;
+    background-size: auto;
+}

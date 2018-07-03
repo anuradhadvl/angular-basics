@@ -7,8 +7,8 @@ import { Time } from '@angular/common';
   styleUrls: ['./workshop-list.component.css']
 })
 export class WorkshopListComponent implements OnInit {
-  
-  workshops = [{
+
+  public workshops : [{
     id: 1,
     name: 'Angular Connect',
     date: '9/03/2034',
@@ -20,6 +20,7 @@ export class WorkshopListComponent implements OnInit {
       city: 'London',
       country: 'England'
     }
+    
   },
   {
     id: 2,
@@ -28,11 +29,7 @@ export class WorkshopListComponent implements OnInit {
     time: '9:00 am',
     price: 950.00,
     imageUrl: '/app/assets/images/ng-nl.png',
-    location: {
-      address: 'The NG-NL Convention Center & Scuba Shop',
-      city: 'Amsterdam',
-      country: 'Netherlands'
-    }
+    online: 'http://NLConvetion.com',
   },
   {
     id: 3,
@@ -74,7 +71,9 @@ export class WorkshopListComponent implements OnInit {
         }
   }]
 
-  constructor() { }
+  constructor() { 
+   
+   }
 
   ngOnInit() {
     

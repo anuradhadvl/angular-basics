@@ -1,4 +1,6 @@
-.thumbnail{
+.thumbnail:hover{
     background-color: gray;
     color : white;
+    
+    
 }

@@ -4,8 +4,14 @@
  <h3>{{item.name}}</h3>
   <p>Date : {{item.date | date:"dd/MM/yy"}}</p>
   <p>Price : {{item.price | currency:'USD':true:'.2-2'}}</p>
-  <p>Time : {{item.time}}</p>
-  <p>Location : {{item.location.address}} {{item.location.city}}, {{item.location.country}}</p>
+  <div [ngSwitch]="item.time">
+      Time: {{item.time}}
+      <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
+      <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
+      <span *ngSwitchDefault>(Normal Start)</span>
+    </div>
+  <p *ngIf = "item.location">Location : {{item.location.address}} {{item.location.city}}, {{item.location.country}}</p>
+  <p *ngIf = "item.online">{{item.online}}</p>
 </div>
 
 </div>
